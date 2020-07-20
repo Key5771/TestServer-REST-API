@@ -20,7 +20,6 @@
 		EA581E3924C58AB200BDD55A /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA581E3824C58AB200BDD55A /* Network.swift */; };
 		EA581E3C24C58E6C00BDD55A /* TestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA581E3B24C58E6C00BDD55A /* TestData.swift */; };
 		EA581E3F24C5969000BDD55A /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA581E3D24C5969000BDD55A /* ListViewController.swift */; };
-		EA581E4024C5969000BDD55A /* ListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA581E3E24C5969000BDD55A /* ListViewController.xib */; };
 		EA581E4424C597CA00BDD55A /* ListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA581E4224C597CA00BDD55A /* ListCollectionViewCell.swift */; };
 		EA581E4524C597CA00BDD55A /* ListCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA581E4324C597CA00BDD55A /* ListCollectionViewCell.xib */; };
 		FE4B23CABF2E6BE5E68924DB /* Pods_TestServer_REST_API_Test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3501EFFF2FC13D3510E2C549 /* Pods_TestServer_REST_API_Test.framework */; };
@@ -70,7 +69,6 @@
 		EA581E3824C58AB200BDD55A /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		EA581E3B24C58E6C00BDD55A /* TestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestData.swift; sourceTree = "<group>"; };
 		EA581E3D24C5969000BDD55A /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
-		EA581E3E24C5969000BDD55A /* ListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListViewController.xib; sourceTree = "<group>"; };
 		EA581E4224C597CA00BDD55A /* ListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCollectionViewCell.swift; sourceTree = "<group>"; };
 		EA581E4324C597CA00BDD55A /* ListCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -196,7 +194,6 @@
 			isa = PBXGroup;
 			children = (
 				EA581E3D24C5969000BDD55A /* ListViewController.swift */,
-				EA581E3E24C5969000BDD55A /* ListViewController.xib */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -330,7 +327,6 @@
 				EA581E4524C597CA00BDD55A /* ListCollectionViewCell.xib in Resources */,
 				EA581E1324C589FD00BDD55A /* LaunchScreen.storyboard in Resources */,
 				EA581E1024C589FD00BDD55A /* Assets.xcassets in Resources */,
-				EA581E4024C5969000BDD55A /* ListViewController.xib in Resources */,
 				EA581E0B24C589FB00BDD55A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

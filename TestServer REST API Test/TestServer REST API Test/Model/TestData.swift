@@ -8,7 +8,12 @@
 
 import Foundation
 
-struct TestData: Codable {
+struct Data: Codable {
+    let data: [TestData]
+    let ok: Bool
+}
+
+struct TestData: Codable, Hashable {
     let id: Int
     let title: String
     let content: String
