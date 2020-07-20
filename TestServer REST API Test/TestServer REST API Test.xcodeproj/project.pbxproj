@@ -1,0 +1,786 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5C30A7F4CC4A54237F191C21 /* Pods_TestServer_REST_API_TestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9574702D4A9BD8B8C612ABD9 /* Pods_TestServer_REST_API_TestTests.framework */; };
+		B261355F9808BBDA27135EEF /* Pods_TestServer_REST_API_Test_TestServer_REST_API_TestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57289B4F4B9C7C2C16F201AD /* Pods_TestServer_REST_API_Test_TestServer_REST_API_TestUITests.framework */; };
+		EA581E0424C589FB00BDD55A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA581E0324C589FB00BDD55A /* AppDelegate.swift */; };
+		EA581E0624C589FB00BDD55A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA581E0524C589FB00BDD55A /* SceneDelegate.swift */; };
+		EA581E0824C589FB00BDD55A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA581E0724C589FB00BDD55A /* ViewController.swift */; };
+		EA581E0B24C589FB00BDD55A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA581E0924C589FB00BDD55A /* Main.storyboard */; };
+		EA581E0E24C589FB00BDD55A /* TestServer_REST_API_Test.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EA581E0C24C589FB00BDD55A /* TestServer_REST_API_Test.xcdatamodeld */; };
+		EA581E1024C589FD00BDD55A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA581E0F24C589FD00BDD55A /* Assets.xcassets */; };
+		EA581E1324C589FD00BDD55A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA581E1124C589FD00BDD55A /* LaunchScreen.storyboard */; };
+		EA581E1E24C589FD00BDD55A /* TestServer_REST_API_TestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA581E1D24C589FD00BDD55A /* TestServer_REST_API_TestTests.swift */; };
+		EA581E2924C589FD00BDD55A /* TestServer_REST_API_TestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA581E2824C589FD00BDD55A /* TestServer_REST_API_TestUITests.swift */; };
+		EA581E3924C58AB200BDD55A /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA581E3824C58AB200BDD55A /* Network.swift */; };
+		FE4B23CABF2E6BE5E68924DB /* Pods_TestServer_REST_API_Test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3501EFFF2FC13D3510E2C549 /* Pods_TestServer_REST_API_Test.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EA581E1A24C589FD00BDD55A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EA581DF824C589FB00BDD55A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EA581DFF24C589FB00BDD55A;
+			remoteInfo = "TestServer REST API Test";
+		};
+		EA581E2524C589FD00BDD55A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EA581DF824C589FB00BDD55A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EA581DFF24C589FB00BDD55A;
+			remoteInfo = "TestServer REST API Test";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		050CFFE12F4C8F41215EDDBB /* Pods-TestServer REST API Test-TestServer REST API TestUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestServer REST API Test-TestServer REST API TestUITests.release.xcconfig"; path = "Target Support Files/Pods-TestServer REST API Test-TestServer REST API TestUITests/Pods-TestServer REST API Test-TestServer REST API TestUITests.release.xcconfig"; sourceTree = "<group>"; };
+		2EF7EEBB7F4B3D4A0563522C /* Pods-TestServer REST API Test-TestServer REST API TestUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestServer REST API Test-TestServer REST API TestUITests.debug.xcconfig"; path = "Target Support Files/Pods-TestServer REST API Test-TestServer REST API TestUITests/Pods-TestServer REST API Test-TestServer REST API TestUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		3501EFFF2FC13D3510E2C549 /* Pods_TestServer_REST_API_Test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestServer_REST_API_Test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3BA166A060A4CCCBB839BA09 /* Pods-TestServer REST API Test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestServer REST API Test.debug.xcconfig"; path = "Target Support Files/Pods-TestServer REST API Test/Pods-TestServer REST API Test.debug.xcconfig"; sourceTree = "<group>"; };
+		57289B4F4B9C7C2C16F201AD /* Pods_TestServer_REST_API_Test_TestServer_REST_API_TestUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestServer_REST_API_Test_TestServer_REST_API_TestUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		74E8E8251855AF0CABE6C4E3 /* Pods-TestServer REST API TestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestServer REST API TestTests.debug.xcconfig"; path = "Target Support Files/Pods-TestServer REST API TestTests/Pods-TestServer REST API TestTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7AB42A8A9D66C9D0664FD0E6 /* Pods-TestServer REST API TestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestServer REST API TestTests.release.xcconfig"; path = "Target Support Files/Pods-TestServer REST API TestTests/Pods-TestServer REST API TestTests.release.xcconfig"; sourceTree = "<group>"; };
+		9574702D4A9BD8B8C612ABD9 /* Pods_TestServer_REST_API_TestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestServer_REST_API_TestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A632360E21D245416FF45A39 /* Pods-TestServer REST API Test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestServer REST API Test.release.xcconfig"; path = "Target Support Files/Pods-TestServer REST API Test/Pods-TestServer REST API Test.release.xcconfig"; sourceTree = "<group>"; };
+		EA581E0024C589FB00BDD55A /* TestServer REST API Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TestServer REST API Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA581E0324C589FB00BDD55A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EA581E0524C589FB00BDD55A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		EA581E0724C589FB00BDD55A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EA581E0A24C589FB00BDD55A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EA581E0D24C589FB00BDD55A /* TestServer_REST_API_Test.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TestServer_REST_API_Test.xcdatamodel; sourceTree = "<group>"; };
+		EA581E0F24C589FD00BDD55A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EA581E1224C589FD00BDD55A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EA581E1424C589FD00BDD55A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA581E1924C589FD00BDD55A /* TestServer REST API TestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TestServer REST API TestTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA581E1D24C589FD00BDD55A /* TestServer_REST_API_TestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestServer_REST_API_TestTests.swift; sourceTree = "<group>"; };
+		EA581E1F24C589FD00BDD55A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA581E2424C589FD00BDD55A /* TestServer REST API TestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TestServer REST API TestUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA581E2824C589FD00BDD55A /* TestServer_REST_API_TestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestServer_REST_API_TestUITests.swift; sourceTree = "<group>"; };
+		EA581E2A24C589FD00BDD55A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA581E3824C58AB200BDD55A /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EA581DFD24C589FB00BDD55A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE4B23CABF2E6BE5E68924DB /* Pods_TestServer_REST_API_Test.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA581E1624C589FD00BDD55A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C30A7F4CC4A54237F191C21 /* Pods_TestServer_REST_API_TestTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA581E2124C589FD00BDD55A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B261355F9808BBDA27135EEF /* Pods_TestServer_REST_API_Test_TestServer_REST_API_TestUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		169DDA2E5EAE3E9C5BA817F2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3501EFFF2FC13D3510E2C549 /* Pods_TestServer_REST_API_Test.framework */,
+				57289B4F4B9C7C2C16F201AD /* Pods_TestServer_REST_API_Test_TestServer_REST_API_TestUITests.framework */,
+				9574702D4A9BD8B8C612ABD9 /* Pods_TestServer_REST_API_TestTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		97539396C94A9F32160E5EF1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3BA166A060A4CCCBB839BA09 /* Pods-TestServer REST API Test.debug.xcconfig */,
+				A632360E21D245416FF45A39 /* Pods-TestServer REST API Test.release.xcconfig */,
+				2EF7EEBB7F4B3D4A0563522C /* Pods-TestServer REST API Test-TestServer REST API TestUITests.debug.xcconfig */,
+				050CFFE12F4C8F41215EDDBB /* Pods-TestServer REST API Test-TestServer REST API TestUITests.release.xcconfig */,
+				74E8E8251855AF0CABE6C4E3 /* Pods-TestServer REST API TestTests.debug.xcconfig */,
+				7AB42A8A9D66C9D0664FD0E6 /* Pods-TestServer REST API TestTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		EA581DF724C589FB00BDD55A = {
+			isa = PBXGroup;
+			children = (
+				EA581E0224C589FB00BDD55A /* TestServer REST API Test */,
+				EA581E1C24C589FD00BDD55A /* TestServer REST API TestTests */,
+				EA581E2724C589FD00BDD55A /* TestServer REST API TestUITests */,
+				EA581E0124C589FB00BDD55A /* Products */,
+				97539396C94A9F32160E5EF1 /* Pods */,
+				169DDA2E5EAE3E9C5BA817F2 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		EA581E0124C589FB00BDD55A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EA581E0024C589FB00BDD55A /* TestServer REST API Test.app */,
+				EA581E1924C589FD00BDD55A /* TestServer REST API TestTests.xctest */,
+				EA581E2424C589FD00BDD55A /* TestServer REST API TestUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EA581E0224C589FB00BDD55A /* TestServer REST API Test */ = {
+			isa = PBXGroup;
+			children = (
+				EA581E3724C58AA300BDD55A /* UI */,
+				EA581E3624C58A9E00BDD55A /* Network */,
+				EA581E0324C589FB00BDD55A /* AppDelegate.swift */,
+				EA581E0524C589FB00BDD55A /* SceneDelegate.swift */,
+				EA581E0924C589FB00BDD55A /* Main.storyboard */,
+				EA581E0F24C589FD00BDD55A /* Assets.xcassets */,
+				EA581E1124C589FD00BDD55A /* LaunchScreen.storyboard */,
+				EA581E1424C589FD00BDD55A /* Info.plist */,
+				EA581E0C24C589FB00BDD55A /* TestServer_REST_API_Test.xcdatamodeld */,
+			);
+			path = "TestServer REST API Test";
+			sourceTree = "<group>";
+		};
+		EA581E1C24C589FD00BDD55A /* TestServer REST API TestTests */ = {
+			isa = PBXGroup;
+			children = (
+				EA581E1D24C589FD00BDD55A /* TestServer_REST_API_TestTests.swift */,
+				EA581E1F24C589FD00BDD55A /* Info.plist */,
+			);
+			path = "TestServer REST API TestTests";
+			sourceTree = "<group>";
+		};
+		EA581E2724C589FD00BDD55A /* TestServer REST API TestUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EA581E2824C589FD00BDD55A /* TestServer_REST_API_TestUITests.swift */,
+				EA581E2A24C589FD00BDD55A /* Info.plist */,
+			);
+			path = "TestServer REST API TestUITests";
+			sourceTree = "<group>";
+		};
+		EA581E3624C58A9E00BDD55A /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				EA581E3824C58AB200BDD55A /* Network.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		EA581E3724C58AA300BDD55A /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				EA581E0724C589FB00BDD55A /* ViewController.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EA581DFF24C589FB00BDD55A /* TestServer REST API Test */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA581E2D24C589FD00BDD55A /* Build configuration list for PBXNativeTarget "TestServer REST API Test" */;
+			buildPhases = (
+				6DC83A1F2FF206A6366943A0 /* [CP] Check Pods Manifest.lock */,
+				EA581DFC24C589FB00BDD55A /* Sources */,
+				EA581DFD24C589FB00BDD55A /* Frameworks */,
+				EA581DFE24C589FB00BDD55A /* Resources */,
+				BC10818FD0E901918C3CD0F8 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "TestServer REST API Test";
+			productName = "TestServer REST API Test";
+			productReference = EA581E0024C589FB00BDD55A /* TestServer REST API Test.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EA581E1824C589FD00BDD55A /* TestServer REST API TestTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA581E3024C589FD00BDD55A /* Build configuration list for PBXNativeTarget "TestServer REST API TestTests" */;
+			buildPhases = (
+				D331D4305D19B5F5A28ABC7D /* [CP] Check Pods Manifest.lock */,
+				EA581E1524C589FD00BDD55A /* Sources */,
+				EA581E1624C589FD00BDD55A /* Frameworks */,
+				EA581E1724C589FD00BDD55A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EA581E1B24C589FD00BDD55A /* PBXTargetDependency */,
+			);
+			name = "TestServer REST API TestTests";
+			productName = "TestServer REST API TestTests";
+			productReference = EA581E1924C589FD00BDD55A /* TestServer REST API TestTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EA581E2324C589FD00BDD55A /* TestServer REST API TestUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA581E3324C589FD00BDD55A /* Build configuration list for PBXNativeTarget "TestServer REST API TestUITests" */;
+			buildPhases = (
+				E5203163B9D7C2AE9436ADFC /* [CP] Check Pods Manifest.lock */,
+				EA581E2024C589FD00BDD55A /* Sources */,
+				EA581E2124C589FD00BDD55A /* Frameworks */,
+				EA581E2224C589FD00BDD55A /* Resources */,
+				FEAA7561AFAB29D223EF0C8D /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EA581E2624C589FD00BDD55A /* PBXTargetDependency */,
+			);
+			name = "TestServer REST API TestUITests";
+			productName = "TestServer REST API TestUITests";
+			productReference = EA581E2424C589FD00BDD55A /* TestServer REST API TestUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EA581DF824C589FB00BDD55A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1160;
+				LastUpgradeCheck = 1160;
+				ORGANIZATIONNAME = "김기현";
+				TargetAttributes = {
+					EA581DFF24C589FB00BDD55A = {
+						CreatedOnToolsVersion = 11.6;
+					};
+					EA581E1824C589FD00BDD55A = {
+						CreatedOnToolsVersion = 11.6;
+						TestTargetID = EA581DFF24C589FB00BDD55A;
+					};
+					EA581E2324C589FD00BDD55A = {
+						CreatedOnToolsVersion = 11.6;
+						TestTargetID = EA581DFF24C589FB00BDD55A;
+					};
+				};
+			};
+			buildConfigurationList = EA581DFB24C589FB00BDD55A /* Build configuration list for PBXProject "TestServer REST API Test" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EA581DF724C589FB00BDD55A;
+			productRefGroup = EA581E0124C589FB00BDD55A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EA581DFF24C589FB00BDD55A /* TestServer REST API Test */,
+				EA581E1824C589FD00BDD55A /* TestServer REST API TestTests */,
+				EA581E2324C589FD00BDD55A /* TestServer REST API TestUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EA581DFE24C589FB00BDD55A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA581E1324C589FD00BDD55A /* LaunchScreen.storyboard in Resources */,
+				EA581E1024C589FD00BDD55A /* Assets.xcassets in Resources */,
+				EA581E0B24C589FB00BDD55A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA581E1724C589FD00BDD55A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA581E2224C589FD00BDD55A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6DC83A1F2FF206A6366943A0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TestServer REST API Test-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BC10818FD0E901918C3CD0F8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TestServer REST API Test/Pods-TestServer REST API Test-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TestServer REST API Test/Pods-TestServer REST API Test-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TestServer REST API Test/Pods-TestServer REST API Test-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D331D4305D19B5F5A28ABC7D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TestServer REST API TestTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E5203163B9D7C2AE9436ADFC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TestServer REST API Test-TestServer REST API TestUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FEAA7561AFAB29D223EF0C8D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TestServer REST API Test-TestServer REST API TestUITests/Pods-TestServer REST API Test-TestServer REST API TestUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TestServer REST API Test-TestServer REST API TestUITests/Pods-TestServer REST API Test-TestServer REST API TestUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TestServer REST API Test-TestServer REST API TestUITests/Pods-TestServer REST API Test-TestServer REST API TestUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EA581DFC24C589FB00BDD55A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA581E3924C58AB200BDD55A /* Network.swift in Sources */,
+				EA581E0824C589FB00BDD55A /* ViewController.swift in Sources */,
+				EA581E0E24C589FB00BDD55A /* TestServer_REST_API_Test.xcdatamodeld in Sources */,
+				EA581E0424C589FB00BDD55A /* AppDelegate.swift in Sources */,
+				EA581E0624C589FB00BDD55A /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA581E1524C589FD00BDD55A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA581E1E24C589FD00BDD55A /* TestServer_REST_API_TestTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA581E2024C589FD00BDD55A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA581E2924C589FD00BDD55A /* TestServer_REST_API_TestUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EA581E1B24C589FD00BDD55A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EA581DFF24C589FB00BDD55A /* TestServer REST API Test */;
+			targetProxy = EA581E1A24C589FD00BDD55A /* PBXContainerItemProxy */;
+		};
+		EA581E2624C589FD00BDD55A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EA581DFF24C589FB00BDD55A /* TestServer REST API Test */;
+			targetProxy = EA581E2524C589FD00BDD55A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EA581E0924C589FB00BDD55A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA581E0A24C589FB00BDD55A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EA581E1124C589FD00BDD55A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA581E1224C589FD00BDD55A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EA581E2B24C589FD00BDD55A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EA581E2C24C589FD00BDD55A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EA581E2E24C589FD00BDD55A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3BA166A060A4CCCBB839BA09 /* Pods-TestServer REST API Test.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U53BLS7M93;
+				INFOPLIST_FILE = "TestServer REST API Test/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "key.TestServer-REST-API-Test";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EA581E2F24C589FD00BDD55A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A632360E21D245416FF45A39 /* Pods-TestServer REST API Test.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U53BLS7M93;
+				INFOPLIST_FILE = "TestServer REST API Test/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "key.TestServer-REST-API-Test";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		EA581E3124C589FD00BDD55A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 74E8E8251855AF0CABE6C4E3 /* Pods-TestServer REST API TestTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U53BLS7M93;
+				INFOPLIST_FILE = "TestServer REST API TestTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "key.TestServer-REST-API-TestTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TestServer REST API Test.app/TestServer REST API Test";
+			};
+			name = Debug;
+		};
+		EA581E3224C589FD00BDD55A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7AB42A8A9D66C9D0664FD0E6 /* Pods-TestServer REST API TestTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U53BLS7M93;
+				INFOPLIST_FILE = "TestServer REST API TestTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "key.TestServer-REST-API-TestTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TestServer REST API Test.app/TestServer REST API Test";
+			};
+			name = Release;
+		};
+		EA581E3424C589FD00BDD55A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2EF7EEBB7F4B3D4A0563522C /* Pods-TestServer REST API Test-TestServer REST API TestUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U53BLS7M93;
+				INFOPLIST_FILE = "TestServer REST API TestUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "key.TestServer-REST-API-TestUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "TestServer REST API Test";
+			};
+			name = Debug;
+		};
+		EA581E3524C589FD00BDD55A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 050CFFE12F4C8F41215EDDBB /* Pods-TestServer REST API Test-TestServer REST API TestUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U53BLS7M93;
+				INFOPLIST_FILE = "TestServer REST API TestUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "key.TestServer-REST-API-TestUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "TestServer REST API Test";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EA581DFB24C589FB00BDD55A /* Build configuration list for PBXProject "TestServer REST API Test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA581E2B24C589FD00BDD55A /* Debug */,
+				EA581E2C24C589FD00BDD55A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EA581E2D24C589FD00BDD55A /* Build configuration list for PBXNativeTarget "TestServer REST API Test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA581E2E24C589FD00BDD55A /* Debug */,
+				EA581E2F24C589FD00BDD55A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EA581E3024C589FD00BDD55A /* Build configuration list for PBXNativeTarget "TestServer REST API TestTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA581E3124C589FD00BDD55A /* Debug */,
+				EA581E3224C589FD00BDD55A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EA581E3324C589FD00BDD55A /* Build configuration list for PBXNativeTarget "TestServer REST API TestUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA581E3424C589FD00BDD55A /* Debug */,
+				EA581E3524C589FD00BDD55A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		EA581E0C24C589FB00BDD55A /* TestServer_REST_API_Test.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				EA581E0D24C589FB00BDD55A /* TestServer_REST_API_Test.xcdatamodel */,
+			);
+			currentVersion = EA581E0D24C589FB00BDD55A /* TestServer_REST_API_Test.xcdatamodel */;
+			path = TestServer_REST_API_Test.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = EA581DF824C589FB00BDD55A /* Project object */;
+}
