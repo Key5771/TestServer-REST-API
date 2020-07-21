@@ -74,7 +74,7 @@ extension ListViewController: UICollectionViewDataSource {
         
         cell.titleLabel.text = test[indexPath.row].title
         cell.contentLabel.text = test[indexPath.row].content
-        cell.userLabel.text = test[indexPath.row].user +  " | " + test[indexPath.row].time
+        cell.userLabel.text = test[indexPath.row].user! +  " | " + test[indexPath.row].time!
         
         return cell
     }
@@ -85,6 +85,10 @@ extension ListViewController: UICollectionViewDataSource {
 extension ListViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)
+        
+        let vc = ContentViewController()
+        vc.data = test[indexPath.row]
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }
 

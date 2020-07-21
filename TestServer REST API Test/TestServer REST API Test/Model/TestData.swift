@@ -17,6 +17,6 @@ struct TestData: Codable, Hashable {
     let id: Int?
     var title: String?
     var content: String?
-    let user: String
-    let time: String
+    var user: String?
+    var time: String?
 }
