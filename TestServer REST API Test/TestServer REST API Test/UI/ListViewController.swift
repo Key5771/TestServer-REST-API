@@ -42,7 +42,11 @@ class ListViewController: UIViewController {
         }
     }
 
-
+    @IBAction func addButtonClick(_ sender: Any) {
+        let vc = AddViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
     /*
     // MARK: - Navigation
 
@@ -65,8 +69,7 @@ extension ListViewController: UICollectionViewDataSource {
         
         cell.titleLabel.text = test[indexPath.row].title
         cell.contentLabel.text = test[indexPath.row].content
-        cell.userLabel.text = test[indexPath.row].user
-        cell.timeLabel.text = test[indexPath.row].time
+        cell.userLabel.text = test[indexPath.row].user +  " | " + test[indexPath.row].time
         
         return cell
     }
@@ -83,7 +86,7 @@ extension ListViewController: UICollectionViewDelegate {
 extension ListViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = collectionView.frame.width - 10
-        let height = width * 9 / 16 + 55.5
+        let height = width * 4 / 16
         return CGSize(width: width, height: height)
     }
 }
