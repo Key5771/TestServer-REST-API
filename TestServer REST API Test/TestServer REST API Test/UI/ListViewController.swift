@@ -36,7 +36,7 @@ class ListViewController: UIViewController {
     }
     
     func loadData() {
-        Network.shared.request(api: .get, method: .get) { (response: Data) in
+        Network.shared.response(api: .get, method: .get) { (response: Data) in
             self.test = response.data
             self.collectionView.reloadData()
         }

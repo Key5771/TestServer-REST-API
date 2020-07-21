@@ -13,6 +13,8 @@ class AddViewController: UIViewController {
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var contentTextView: UITextView!
     
+    var postData = TestData(id: nil, title: nil, content: nil, user: "sslab", time: "2020년 7월 21일")
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -35,15 +37,27 @@ class AddViewController: UIViewController {
     }
 
     @objc func save() {
-        let alertController = UIAlertController(title: "저장", message: "저장하시겠습니까?", preferredStyle: .alert)
+        let alertController = UIAlertController(title: "저장", message: "저장되었습니다", preferredStyle: .alert)
         let okButton = UIAlertAction(title: "확인", style: .default) { (reuslt) in
-            
+            self.postContent()
         }
         
         alertController.addAction(okButton)
         self.present(alertController, animated: true, completion: nil)
         
-        self.navigationController?.popViewController(animated: true)
+    }
+    
+    func postContent() {
+        self.postData.content = self.contentTextView.text
+        self.postData.title = self.titleTextField.text
+        
+        Network.shared.request(api: .post, method: .post, parameters: postData.self) { (err) in
+            if let err = err {
+                print("Error getting POST: \(err)")
+            } else {
+                self.navigationController?.popViewController(animated: true)
+            }
+        }
     }
 
     /*
