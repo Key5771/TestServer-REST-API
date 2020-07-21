@@ -10,7 +10,9 @@ import UIKit
 import Alamofire
 
 class ListViewController: UIViewController {
-    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet private weak var collectionView: UICollectionView!
+    
+    private let refreshControl = UIRefreshControl()
     
     var test: [TestData] = []
     
@@ -20,14 +22,15 @@ class ListViewController: UIViewController {
         loadData()
         setupUI()
         
+        collectionView.refreshControl = refreshControl
+        refreshControl.addTarget(self, action: #selector(loadData), for: .valueChanged)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         loadData()
-        print("test count: \(test.count)")
     }
     
-    func setupUI() {
+    private func setupUI() {
         let nibName = UINib(nibName: String(describing: ListCollectionViewCell.self), bundle: nil)
         collectionView.register(nibName, forCellWithReuseIdentifier: "listCell")
 
@@ -35,11 +38,13 @@ class ListViewController: UIViewController {
         collectionView.dataSource = self
     }
     
-    func loadData() {
+    @objc private func loadData() {
         Network.shared.response(api: .get, method: .get) { (response: Data) in
             self.test = response.data
             self.collectionView.reloadData()
         }
+        
+        refreshControl.endRefreshing()
     }
 
     @IBAction func addButtonClick(_ sender: Any) {
