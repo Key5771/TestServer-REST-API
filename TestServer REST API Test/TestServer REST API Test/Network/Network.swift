@@ -26,7 +26,7 @@ class Network {
         
         let myQueue = DispatchQueue(label: "testQueue", qos: .background, attributes: [.concurrent])
         
-        AF.request(baseUrl + api.rawValue, method: method, parameters: parameters).responseDecodable(of: Response.self) { (response) in
+        AF.request(baseUrl + api.rawValue, method: method, parameters: parameters).responseDecodable(of: Response.self, queue: myQueue) { (response) in
             switch response.result {
             case .success(let obj):
                 handler(obj)

@@ -14,9 +14,9 @@ struct Data: Codable {
 }
 
 struct TestData: Codable, Hashable {
-    let id: Int
-    let title: String
-    let content: String
+    let id: Int?
+    var title: String?
+    var content: String?
     let user: String
     let time: String
 }
