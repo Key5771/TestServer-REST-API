@@ -26,6 +26,8 @@
 		EA581E4924C6A0C800BDD55A /* AddViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA581E4724C6A0C800BDD55A /* AddViewController.xib */; };
 		EA581E4C24C6D04000BDD55A /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA581E4A24C6D04000BDD55A /* ContentViewController.swift */; };
 		EA581E4D24C6D04000BDD55A /* ContentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA581E4B24C6D04000BDD55A /* ContentViewController.xib */; };
+		EA581E5124C81B6800BDD55A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA581E4F24C81B6800BDD55A /* LoginViewController.swift */; };
+		EA581E5224C81B6800BDD55A /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA581E5024C81B6800BDD55A /* LoginViewController.xib */; };
 		FE4B23CABF2E6BE5E68924DB /* Pods_TestServer_REST_API_Test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3501EFFF2FC13D3510E2C549 /* Pods_TestServer_REST_API_Test.framework */; };
 /* End PBXBuildFile section */
 
@@ -79,6 +81,8 @@
 		EA581E4724C6A0C800BDD55A /* AddViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddViewController.xib; sourceTree = "<group>"; };
 		EA581E4A24C6D04000BDD55A /* ContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
 		EA581E4B24C6D04000BDD55A /* ContentViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContentViewController.xib; sourceTree = "<group>"; };
+		EA581E4F24C81B6800BDD55A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		EA581E5024C81B6800BDD55A /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,6 +205,7 @@
 		EA581E3724C58AA300BDD55A /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				EA581E4E24C81B5300BDD55A /* Login */,
 				EA581E3D24C5969000BDD55A /* ListViewController.swift */,
 				EA581E4624C6A0C800BDD55A /* AddViewController.swift */,
 				EA581E4724C6A0C800BDD55A /* AddViewController.xib */,
@@ -225,6 +230,15 @@
 				EA581E4324C597CA00BDD55A /* ListCollectionViewCell.xib */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		EA581E4E24C81B5300BDD55A /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				EA581E4F24C81B6800BDD55A /* LoginViewController.swift */,
+				EA581E5024C81B6800BDD55A /* LoginViewController.xib */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -341,6 +355,7 @@
 				EA581E4D24C6D04000BDD55A /* ContentViewController.xib in Resources */,
 				EA581E4924C6A0C800BDD55A /* AddViewController.xib in Resources */,
 				EA581E1024C589FD00BDD55A /* Assets.xcassets in Resources */,
+				EA581E5224C81B6800BDD55A /* LoginViewController.xib in Resources */,
 				EA581E0B24C589FB00BDD55A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -477,6 +492,7 @@
 				EA581E3C24C58E6C00BDD55A /* TestData.swift in Sources */,
 				EA581E0424C589FB00BDD55A /* AppDelegate.swift in Sources */,
 				EA581E0624C589FB00BDD55A /* SceneDelegate.swift in Sources */,
+				EA581E5124C81B6800BDD55A /* LoginViewController.swift in Sources */,
 				EA581E3F24C5969000BDD55A /* ListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

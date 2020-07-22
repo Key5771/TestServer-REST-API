@@ -13,7 +13,7 @@ class AddViewController: UIViewController {
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var contentTextView: UITextView!
     
-    var postData = TestData(id: nil, title: nil, content: nil, user: "sslab", time: "2020년 7월 21일")
+    var postData = TestData(id: nil, title: nil, content: nil, user: "sslab", time: nil)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,6 +50,11 @@ class AddViewController: UIViewController {
     func postContent() {
         self.postData.content = self.contentTextView.text
         self.postData.title = self.titleTextField.text
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy년 MM월 dd일"
+        let date = dateFormatter.string(from: Date())
+        self.postData.time = date
         
         Network.shared.request(api: .post, method: .post, parameters: postData.self) { (err) in
             if let err = err {
