@@ -41,7 +41,9 @@ class ListViewController: UIViewController {
     @objc private func loadData() {
         Network.shared.response(api: .get, method: .get) { (response: Data) in
             self.test = response.data
-            self.collectionView.reloadData()
+            DispatchQueue.main.async { [weak self] in
+                self?.collectionView.reloadData()
+            }
         }
         
         refreshControl.endRefreshing()
@@ -70,7 +72,8 @@ extension ListViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "listCell", for: indexPath) as! ListCollectionViewCell
+        let dequeCell = collectionView.dequeueReusableCell(withReuseIdentifier: "listCell", for: indexPath)
+        guard let cell = dequeCell as? ListCollectionViewCell else { return dequeCell }
         
         cell.titleLabel.text = test[indexPath.row].title
         cell.contentLabel.text = test[indexPath.row].content
