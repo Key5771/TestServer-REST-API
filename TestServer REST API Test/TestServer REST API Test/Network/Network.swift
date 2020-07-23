@@ -43,42 +43,23 @@ class Network {
     }
     
     // Post Data Function
-    func request(api: API,
-                 method: Alamofire.HTTPMethod,
-                 parameters: TestData? = nil,
-                 completion handler: @escaping (Error?) -> Void) {
+    func request<Request: Codable>(api: API,
+                                   method: Alamofire.HTTPMethod,
+                                   parameters: Request? = nil,
+                                   completion handler: @escaping (Request?) -> Void) {
         
         AF.request(baseUrl + api.rawValue,
                    method: method,
                    parameters: parameters,
-                   encoder: JSONParameterEncoder.default).response(queue: myQueue) { (response) in
-                    
-                    switch response.result {
-                    case .success(_):
-                        handler(nil)
-                    case .failure(let err):
-                        print("Error getting POST: \(err)")
-                    }
-        }
-    }
-    
-    // User Regist Function
-    func requestUser(api: API,
-                 method: Alamofire.HTTPMethod,
-                 parameters: UserData? = nil,
-                 completion handler: @escaping (Error?) -> Void) {
-        
-        AF.request(baseUrl + api.rawValue,
-                   method: method,
-                   parameters: parameters,
-                   encoder: JSONParameterEncoder.default).response(queue: myQueue) { (response) in
-                    
-                    switch response.result {
-                    case .success(_):
-                        handler(nil)
-                    case .failure(let err):
-                        print("Error getting POST: \(err)")
-                    }
+                   encoder: JSONParameterEncoder.default)
+            .responseDecodable(of: Request.self, queue: myQueue) { (response) in
+                
+                switch response.result {
+                case .success(_):
+                    handler(nil)
+                case .failure(let err):
+                    print("Error getting POST: \(err)")
+                }
         }
     }
 }
