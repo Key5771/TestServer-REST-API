@@ -17,6 +17,9 @@ class Network {
     enum API: String {
         case get = "/test/"
         case post = "/test"
+        case regist = "/user/"
+        case login = "/user/login"
+        case logout = "/user/logout"
     }
     
     func response<Response: Decodable> (api: API,
