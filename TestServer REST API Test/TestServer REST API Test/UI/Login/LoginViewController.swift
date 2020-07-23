@@ -20,10 +20,11 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func loginButtonClick(_ sender: Any) {
-        let vc = ListViewController()
-        vc.modalPresentationStyle = .fullScreen
+        let vc = self.storyboard?.instantiateViewController(identifier: "navigation")
+        vc?.modalPresentationStyle = .fullScreen
         
-        present(vc, animated: true, completion: nil)
+        guard let viewController = vc else { return }
+        self.present(viewController, animated: true, completion: nil)
     }
     
     /*
