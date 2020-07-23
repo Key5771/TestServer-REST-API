@@ -27,6 +27,12 @@ class LoginViewController: UIViewController {
         self.present(viewController, animated: true, completion: nil)
     }
     
+    @IBAction func registButtonClick(_ sender: Any) {
+        let vc = RegistViewController()
+        self.present(vc, animated: true, completion: nil)
+    }
+    
+    
     /*
     // MARK: - Navigation
 
