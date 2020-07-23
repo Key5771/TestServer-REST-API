@@ -42,6 +42,7 @@ class Network {
         }
     }
     
+    // Post Data Function
     func request(api: API,
                  method: Alamofire.HTTPMethod,
                  parameters: TestData? = nil,
@@ -50,7 +51,27 @@ class Network {
         AF.request(baseUrl + api.rawValue,
                    method: method,
                    parameters: parameters,
-                   encoder: JSONParameterEncoder.default).response { (response) in
+                   encoder: JSONParameterEncoder.default).response(queue: myQueue) { (response) in
+                    
+                    switch response.result {
+                    case .success(_):
+                        handler(nil)
+                    case .failure(let err):
+                        print("Error getting POST: \(err)")
+                    }
+        }
+    }
+    
+    // User Regist Function
+    func requestUser(api: API,
+                 method: Alamofire.HTTPMethod,
+                 parameters: UserData? = nil,
+                 completion handler: @escaping (Error?) -> Void) {
+        
+        AF.request(baseUrl + api.rawValue,
+                   method: method,
+                   parameters: parameters,
+                   encoder: JSONParameterEncoder.default).response(queue: myQueue) { (response) in
                     
                     switch response.result {
                     case .success(_):

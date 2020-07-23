@@ -29,6 +29,7 @@
 		EA581E5424C82BE300BDD55A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA581E5324C82BE300BDD55A /* LoginViewController.swift */; };
 		EA581E5724C95F3F00BDD55A /* RegistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA581E5524C95F3F00BDD55A /* RegistViewController.swift */; };
 		EA581E5824C95F3F00BDD55A /* RegistViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA581E5624C95F3F00BDD55A /* RegistViewController.xib */; };
+		EA581E5A24C976E800BDD55A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA581E5924C976E800BDD55A /* User.swift */; };
 		FE4B23CABF2E6BE5E68924DB /* Pods_TestServer_REST_API_Test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3501EFFF2FC13D3510E2C549 /* Pods_TestServer_REST_API_Test.framework */; };
 /* End PBXBuildFile section */
 
@@ -85,6 +86,7 @@
 		EA581E5324C82BE300BDD55A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		EA581E5524C95F3F00BDD55A /* RegistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistViewController.swift; sourceTree = "<group>"; };
 		EA581E5624C95F3F00BDD55A /* RegistViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegistViewController.xib; sourceTree = "<group>"; };
+		EA581E5924C976E800BDD55A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -221,6 +223,7 @@
 			isa = PBXGroup;
 			children = (
 				EA581E3B24C58E6C00BDD55A /* TestData.swift */,
+				EA581E5924C976E800BDD55A /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -495,6 +498,7 @@
 				EA581E3C24C58E6C00BDD55A /* TestData.swift in Sources */,
 				EA581E0424C589FB00BDD55A /* AppDelegate.swift in Sources */,
 				EA581E0624C589FB00BDD55A /* SceneDelegate.swift in Sources */,
+				EA581E5A24C976E800BDD55A /* User.swift in Sources */,
 				EA581E5724C95F3F00BDD55A /* RegistViewController.swift in Sources */,
 				EA581E5424C82BE300BDD55A /* LoginViewController.swift in Sources */,
 				EA581E3F24C5969000BDD55A /* ListViewController.swift in Sources */,
