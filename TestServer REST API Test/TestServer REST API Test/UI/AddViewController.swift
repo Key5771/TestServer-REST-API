@@ -38,8 +38,11 @@ class AddViewController: UIViewController {
 
     @objc func save() {
         let alertController = UIAlertController(title: "저장", message: "저장되었습니다", preferredStyle: .alert)
-        let okButton = UIAlertAction(title: "확인", style: .default) { (reuslt) in
+        let okButton = UIAlertAction(title: "확인", style: .default) { (_) in
             self.postContent()
+            DispatchQueue.main.async {
+                self.navigationController?.popViewController(animated: true)
+            }
         }
         
         alertController.addAction(okButton)
@@ -59,8 +62,6 @@ class AddViewController: UIViewController {
         Network.shared.request(api: .post, method: .post, parameters: postData.self) { (err) in
             if let err = err {
                 print("Error getting POST: \(err)")
-            } else {
-                self.navigationController?.popViewController(animated: true)
             }
         }
     }
