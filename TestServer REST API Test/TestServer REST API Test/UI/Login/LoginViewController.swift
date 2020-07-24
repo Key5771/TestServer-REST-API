@@ -14,17 +14,34 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var signupButton: UIButton!
     
+    var loginUser = UserData(username: nil, password: nil)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
     }
     
-    @IBAction func loginButtonClick(_ sender: Any) {
-        let vc = self.storyboard?.instantiateViewController(identifier: "navigation")
-        vc?.modalPresentationStyle = .fullScreen
+    func login() {
+        self.loginUser.username = self.loginTextField.text
+        self.loginUser.password = self.passwordTextField.text
         
-        guard let viewController = vc else { return }
-        self.present(viewController, animated: true, completion: nil)
+        Network.shared.request(api: .login, method: .post, parameters: loginUser.self) { (err) in
+            if let err = err {
+                print("Error getting Login: \(err)")
+            } else {
+                DispatchQueue.main.async {
+                    let viewController = self.storyboard?.instantiateViewController(identifier: "navigation")
+                    viewController?.modalPresentationStyle = .fullScreen
+                    
+                    guard let vc = viewController else { return }
+                    self.present(vc, animated: true, completion: nil)
+                }
+            }
+        }
+    }
+    
+    @IBAction func loginButtonClick(_ sender: Any) {
+        self.login()
     }
     
     @IBAction func registButtonClick(_ sender: Any) {
