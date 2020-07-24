@@ -39,7 +39,7 @@ class ListViewController: UIViewController {
     }
     
     @objc private func loadData() {
-        Network.shared.response(api: .get, method: .get) { (response: Data) in
+        Network.shared.response(api: .getData, method: .get) { (response: Data) in
             self.test = response.data
             DispatchQueue.main.async { [weak self] in
                 self?.collectionView.reloadData()

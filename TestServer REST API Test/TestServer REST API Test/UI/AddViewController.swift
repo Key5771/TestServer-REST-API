@@ -59,7 +59,7 @@ class AddViewController: UIViewController {
         let date = dateFormatter.string(from: Date())
         self.postData.time = date
         
-        Network.shared.request(api: .post, method: .post, parameters: postData.self) { (err) in
+        Network.shared.request(api: .postData, method: .post, parameters: postData.self) { (err) in
             if let err = err {
                 print("Error getting POST: \(err)")
             }

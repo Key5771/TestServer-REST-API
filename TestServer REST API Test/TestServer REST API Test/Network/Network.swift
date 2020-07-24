@@ -15,8 +15,8 @@ class Network {
     let myQueue = DispatchQueue(label: "testQueue", qos: .background, attributes: .concurrent)
     
     enum API: String {
-        case get = "/test/"
-        case post = "/test"
+        case getData = "/test/"
+        case postData = "/test"
         case regist = "/user/"
         case login = "/user/login"
         case logout = "/user/logout"
