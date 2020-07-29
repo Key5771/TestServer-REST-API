@@ -25,8 +25,8 @@ class ListViewController: UIViewController {
         collectionView.refreshControl = refreshControl
         refreshControl.addTarget(self, action: #selector(loadData), for: .valueChanged)
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
+        
+    override func viewDidAppear(_ animated: Bool) {
         loadData()
     }
     
