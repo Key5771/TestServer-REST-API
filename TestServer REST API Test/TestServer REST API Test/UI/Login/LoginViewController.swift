@@ -9,10 +9,10 @@
 import UIKit
 
 class LoginViewController: UIViewController {
-    @IBOutlet weak var loginTextField: UITextField!
-    @IBOutlet weak var passwordTextField: UITextField!
-    @IBOutlet weak var loginButton: UIButton!
-    @IBOutlet weak var signupButton: UIButton!
+    @IBOutlet private weak var loginTextField: UITextField!
+    @IBOutlet private weak var passwordTextField: UITextField!
+    @IBOutlet private weak var loginButton: UIButton!
+    @IBOutlet private weak var signupButton: UIButton!
     
     var loginUser = UserData(username: nil, password: nil)
     
@@ -21,7 +21,7 @@ class LoginViewController: UIViewController {
 
     }
     
-    func loginError() {
+    private func loginError() {
         DispatchQueue.main.async {
             let alertController = UIAlertController(title: "로그인 실패", message: "아이디 또는 패스워드를 확인해주세요", preferredStyle: .alert)
             
@@ -32,7 +32,7 @@ class LoginViewController: UIViewController {
         }
     }
     
-    func login() {
+    private func login() {
         if loginTextField.text == "" || passwordTextField.text == "" {
             print("loginData nil")
             loginError()
