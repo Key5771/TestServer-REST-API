@@ -90,7 +90,10 @@ extension ListViewController: UICollectionViewDelegate {
         collectionView.deselectItem(at: indexPath, animated: true)
         
         let vc = ContentViewController()
-        vc.data = test[indexPath.row]
+//        vc.data = test[indexPath.row]
+        
+        guard let id = test[indexPath.row].id else { return }
+        vc.contentId = id
         self.navigationController?.pushViewController(vc, animated: true)
     }
 }
