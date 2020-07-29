@@ -32,7 +32,7 @@ class RegistViewController: UIViewController {
         self.registData.username = self.usernameTextField.text
         self.registData.password = self.passwordTextField.text
         
-        Network.shared.request(api: .regist, method: .post, parameters: registData.self) { (err) in
+        Network.shared.request(api: .regist, method: .post, parameters: registData.self) { (nil, err) in
             if let err = err {
                 print("Error getting Regist: \(err)")
             } else {

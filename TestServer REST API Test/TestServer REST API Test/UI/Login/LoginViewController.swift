@@ -21,27 +21,44 @@ class LoginViewController: UIViewController {
 
     }
     
+    func loginError() {
+        DispatchQueue.main.async {
+            let alertController = UIAlertController(title: "로그인 실패", message: "아이디 또는 패스워드를 확인해주세요", preferredStyle: .alert)
+            
+            let okButton = UIAlertAction(title: "확인", style: .default, handler: nil)
+            
+            alertController.addAction(okButton)
+            self.present(alertController, animated: true, completion: nil)
+        }
+    }
+    
     func login() {
-        self.loginUser.username = self.loginTextField.text
-        self.loginUser.password = self.passwordTextField.text
-        
-        Network.shared.request(api: .login, method: .post, parameters: loginUser.self) { (err) in
-            if let err = err {
-                print("Error getting Login: \(err)")
-            } else {
-                DispatchQueue.main.async {
-                    let viewController = self.storyboard?.instantiateViewController(identifier: "navigation")
-                    viewController?.modalPresentationStyle = .fullScreen
-                    
-                    guard let vc = viewController else { return }
-                    self.present(vc, animated: true, completion: nil)
+        if loginTextField.text == "" || passwordTextField.text == "" {
+            print("loginData nil")
+            loginError()
+        } else {
+            self.loginUser.username = self.loginTextField.text
+            self.loginUser.password = self.passwordTextField.text
+            
+            Network.shared.request(api: .login, method: .post, parameters: loginUser.self) { (nil, err) in
+                if let err = err {
+                    print("Error getting Login: \(err)")
+                    self.loginError()
+                } else {
+                    DispatchQueue.main.async {
+                        let viewController = self.storyboard?.instantiateViewController(identifier: "navigation")
+                        viewController?.modalPresentationStyle = .fullScreen
+                        
+                        guard let vc = viewController else { return }
+                        self.present(vc, animated: true, completion: nil)
+                    }
                 }
             }
         }
     }
     
     @IBAction func loginButtonClick(_ sender: Any) {
-        self.login()
+        login()
     }
     
     @IBAction func registButtonClick(_ sender: Any) {
