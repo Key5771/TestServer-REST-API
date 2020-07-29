@@ -19,20 +19,18 @@ class ContentViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("contentId: \(contentId)")
-//        userLabel.text = data.user! + " | " + data.time!
-//        titleLabel.text = data.title
-//        contentLabel.text = data.content
+        
         getContent(contentId)
     }
 
     func getContent(_ id: Int) {
         Network.shared.response(api: .getData, method: .get, parameters: contentId) { (response: TestData) in
-            print("responseData: \(response)")
             self.data = response
             
             DispatchQueue.main.async {
-                self.userLabel.text = self.data.user! + " | " + self.data.time!
+                guard let user = self.data.user, let time = self.data.time else { return }
+                
+                self.userLabel.text = user + " | " + time
                 self.titleLabel.text = self.data.title
                 self.contentLabel.text = self.data.content
             }
