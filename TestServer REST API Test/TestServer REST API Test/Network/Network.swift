@@ -46,7 +46,7 @@ class Network {
     func request<Request: Codable>(api: API,
                                    method: Alamofire.HTTPMethod,
                                    parameters: Request? = nil,
-                                   completion handler: @escaping (Request?) -> Void) {
+                                   completion handler: @escaping (Request?, Error?) -> Void) {
         
         AF.request(baseUrl + api.rawValue,
                    method: method,
@@ -56,9 +56,10 @@ class Network {
                 
                 switch response.result {
                 case .success(_):
-                    handler(nil)
+                    handler(nil, nil)
                 case .failure(let err):
                     print("Error getting POST: \(err)")
+                    handler(nil, err)
                 }
         }
     }
