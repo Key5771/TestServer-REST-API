@@ -15,6 +15,7 @@ class ListViewController: UIViewController {
     private let refreshControl = UIRefreshControl()
     
     var test: [TestData] = []
+    var reuseIdentifier = "listCell"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -72,7 +73,7 @@ extension ListViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let dequeCell = collectionView.dequeueReusableCell(withReuseIdentifier: "listCell", for: indexPath)
+        let dequeCell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
         guard let cell = dequeCell as? ListCollectionViewCell else { return dequeCell }
         
         cell.titleLabel.text = test[indexPath.row].title
@@ -95,6 +96,11 @@ extension ListViewController: UICollectionViewDelegate {
         guard let id = test[indexPath.row].id else { return }
         vc.contentId = id
         self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, performAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) {
+        test.remove(at: indexPath.row)
+        collectionView.deleteItems(at: [indexPath])
     }
 }
 
