@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+import SwipeCellKit
 
 class ListViewController: UIViewController {
     @IBOutlet private weak var collectionView: UICollectionView!
@@ -76,6 +77,8 @@ extension ListViewController: UICollectionViewDataSource {
         let dequeCell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
         guard let cell = dequeCell as? ListCollectionViewCell else { return dequeCell }
         
+        cell.delegate = self
+        
         cell.titleLabel.text = test[indexPath.row].title
         cell.contentLabel.text = test[indexPath.row].content
         cell.userLabel.text = test[indexPath.row].user! +  " | " + test[indexPath.row].time!
@@ -98,10 +101,6 @@ extension ListViewController: UICollectionViewDelegate {
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
-    func collectionView(_ collectionView: UICollectionView, performAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) {
-        test.remove(at: indexPath.row)
-        collectionView.deleteItems(at: [indexPath])
-    }
 }
 
 extension ListViewController: UICollectionViewDelegateFlowLayout {
@@ -110,4 +109,22 @@ extension ListViewController: UICollectionViewDelegateFlowLayout {
         let height = width * 4 / 16
         return CGSize(width: width, height: height)
     }
+}
+
+extension ListViewController: SwipeCollectionViewCellDelegate {
+    func collectionView(_ collectionView: UICollectionView, editActionsForItemAt indexPath: IndexPath, for orientation: SwipeActionsOrientation) -> [SwipeAction]? {
+        guard orientation == .right else { return nil }
+        
+        let deleteAction = SwipeAction(style: .destructive, title: "Delete") { (action, indexPath) in
+            self.test.remove(at: indexPath.row)
+            collectionView.deleteItems(at: [indexPath])
+            action.fulfill(with: .delete)
+        }
+        
+        deleteAction.image = UIImage(named: "delete")
+        
+        return [deleteAction]
+    }
+    
+    
 }
