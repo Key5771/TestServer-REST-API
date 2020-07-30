@@ -34,13 +34,16 @@ class Network {
             id = String(params)
         }
         
-        AF.request(baseUrl + api.rawValue + id, method: method).responseDecodable(of: Response.self, queue: myQueue) { (response) in
-            switch response.result {
-            case .success(let data):
-                handler(data)
-            case .failure(let err):
-                print("Error in GET: \(err)")
-            }
+        AF.request(baseUrl + api.rawValue + id,
+                   method: method)
+            .responseDecodable(of: Response.self, queue: myQueue) { (response) in
+                
+                switch response.result {
+                case .success(let data):
+                    handler(data)
+                case .failure(let err):
+                    print("Error in GET: \(err)")
+                }
         }
     }
     
