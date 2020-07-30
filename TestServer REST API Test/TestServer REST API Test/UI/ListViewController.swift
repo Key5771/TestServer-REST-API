@@ -116,9 +116,13 @@ extension ListViewController: SwipeCollectionViewCellDelegate {
         guard orientation == .right else { return nil }
         
         let deleteAction = SwipeAction(style: .destructive, title: "Delete") { (action, indexPath) in
-            self.test.remove(at: indexPath.row)
-            collectionView.deleteItems(at: [indexPath])
-            action.fulfill(with: .delete)
+            Network.shared.response(api: .getData, method: .delete, parameters: self.test[indexPath.row].id) { (response: TestData) in
+                DispatchQueue.main.async {
+                    self.test.remove(at: indexPath.row)
+                    collectionView.deleteItems(at: [indexPath])
+                    action.fulfill(with: .delete)
+                }
+            }
         }
         
         deleteAction.image = UIImage(named: "delete")
