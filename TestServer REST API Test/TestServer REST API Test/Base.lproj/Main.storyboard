@@ -37,6 +37,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="TestServer API Test" id="XLf-Eo-xtR">
+                        <barButtonItem key="leftBarButtonItem" systemItem="edit" id="ygo-fg-OuU"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="XaC-IQ-uku">
                             <connections>
                                 <action selector="addButtonClick:" destination="BYZ-38-t0r" id="ur1-hC-EiI"/>
@@ -73,7 +74,7 @@
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="비밀번호" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qUE-0n-CuZ">
                                 <rect key="frame" x="60" y="349" width="294" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FLz-Jy-6Df">
                                 <rect key="frame" x="60" y="433" width="294" height="36"/>
