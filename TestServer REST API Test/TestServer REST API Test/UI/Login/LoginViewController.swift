@@ -46,10 +46,14 @@ class LoginViewController: UIViewController {
                     self.loginError()
                 } else {
                     DispatchQueue.main.async {
-                        let viewController = self.storyboard?.instantiateViewController(identifier: "navigation")
-                        viewController?.modalPresentationStyle = .fullScreen
+                        let viewController = self.storyboard?.instantiateViewController(identifier: "navigation") as? UINavigationController
                         
                         guard let vc = viewController else { return }
+                        vc.modalPresentationStyle = .fullScreen
+                        
+                        guard let listVC = vc.topViewController as? ListViewController, let user = self.loginUser.username else { return }
+                        listVC.loginUser = user
+                        
                         self.present(vc, animated: true, completion: nil)
                     }
                 }

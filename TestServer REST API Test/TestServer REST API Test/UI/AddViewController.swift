@@ -13,7 +13,8 @@ class AddViewController: UIViewController {
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var contentTextView: UITextView!
     
-    var postData = TestData(id: nil, title: nil, content: nil, user: "sslab", time: nil)
+    var postData = TestData(id: nil, title: nil, content: nil, user: nil, time: nil)
+    var loginUser = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,6 +54,7 @@ class AddViewController: UIViewController {
     func postContent() {
         self.postData.content = self.contentTextView.text
         self.postData.title = self.titleTextField.text
+        self.postData.user = self.loginUser
         
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy년 MM월 dd일"

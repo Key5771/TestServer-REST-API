@@ -15,6 +15,7 @@ class ListViewController: UIViewController {
     
     private let refreshControl = UIRefreshControl()
     
+    var loginUser = ""
     var test: [TestData] = []
     var reuseIdentifier = "listCell"
     
@@ -53,6 +54,7 @@ class ListViewController: UIViewController {
 
     @IBAction func addButtonClick(_ sender: Any) {
         let vc = AddViewController()
+        vc.loginUser = loginUser
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
