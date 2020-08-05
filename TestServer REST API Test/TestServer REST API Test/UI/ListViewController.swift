@@ -83,7 +83,10 @@ extension ListViewController: UICollectionViewDataSource {
         
         cell.titleLabel.text = test[indexPath.row].title
         cell.contentLabel.text = test[indexPath.row].content
-        cell.userLabel.text = test[indexPath.row].user! +  " | " + test[indexPath.row].time!
+        
+        if let user = test[indexPath.row].user, let time = test[indexPath.row].time {
+            cell.userLabel.text = user +  " | " + time
+        }
         
         return cell
     }
